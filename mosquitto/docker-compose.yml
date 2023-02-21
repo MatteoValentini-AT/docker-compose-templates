@@ -1,0 +1,10 @@
+version: '3.1'
+services:
+  mqtt:
+    image: eclipse-mosquitto
+    container_name: mqtt
+    volumes:
+      - ./data:/mosquitto/data
+      - ./config/mosquitto.conf:/mosquitto/config/mosquitto.conf
+    ports:
+      - 1883:1883
